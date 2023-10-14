@@ -1,0 +1,12 @@
+{
+  "app": {
+    "commons": {
+      "save": "Guardar",
+      "cancel": "Cancelar"
+    },
+    "error": {
+      "server": "Error en servidor",
+      "badRequest": "Error en cliente"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "app.commons.save": {
+    "es": "Guardar",
+    "en": "Save"
+  },
+  "app.commons.cancel": {
+    "es": "Cancelar",
+    "en": "Cancel"
+  },
+  "app.error.server": {
+    "es": "Error en servidor",
+    "en": "Error on server"
+  },
+  "app.error.badRequest": {
+    "es": "Error en cliente",
+    "en": "Error on client"
+  }
+}
