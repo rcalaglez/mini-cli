@@ -1,4 +1,7 @@
 ### Node ###
+# Outputs
+*.csv
+
 # Logs
 logs
 *.log

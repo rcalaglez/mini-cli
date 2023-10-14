@@ -37,4 +37,27 @@ function flattenTranslations(data, parentKey = "") {
   return entries;
 }
 
-module.exports = { flattenTranslations, getKeysWithTranslations };
+function keysWithTranslationsToCsv(data) {
+  const header = ["key", ...Object.keys(data[Object.keys(data)[0]])];
+  return objectToCsv(data, header);
+}
+
+function objectToCsv(data, header) {
+  const csv = [header.join(";")];
+
+  for (let key in data) {
+    const row = [key];
+    for (let lang of header.slice(1)) {
+      row.push(data[key][lang]);
+    }
+    csv.push(row.join(";"));
+  }
+
+  return csv.join("\n");
+}
+
+module.exports = {
+  flattenTranslations,
+  getKeysWithTranslations,
+  keysWithTranslationsToCsv,
+};
