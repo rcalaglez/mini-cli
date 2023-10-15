@@ -60,18 +60,23 @@ function flattenTranslations(data, parentKey = "") {
 }
 
 function keysWithTranslationsToCsv(data) {
-  const header = ["key", "state", ...Object.keys(data[Object.keys(data)[0]])];
+  const header = ["key"];
+
+  header.push("es", "en", "state");
   return objectToCsv(data, header);
 }
 
 function objectToCsv(data, header) {
   const csv = [header.join(";")];
 
+  console.log("headers", csv);
+
   for (let key in data) {
     const row = [key];
-    for (let lang of header.slice(2)) {
-      row.push(data[key][lang]);
+    for (let lang of header.slice(1, -1)) {
+      row.push(data[key][lang] || "");
     }
+    row.push(data[key].state);
     csv.push(row.join(";"));
   }
 

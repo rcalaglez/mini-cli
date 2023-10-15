@@ -25,7 +25,10 @@ program
     }
 
     const comparison = getKeysComparison(keysWithTranslations, previousData);
+    console.log(comparison);
+
     const csvData = keysWithTranslationsToCsv(comparison);
+    console.log(csvData);
 
     fs.writeFileSync(options.output, csvData, "utf-8");
     console.log(`Data saved to ${options.output}`);
