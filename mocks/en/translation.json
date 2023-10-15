@@ -2,10 +2,11 @@
   "app": {
     "commons": {
       "save": "Save",
-      "cancel": "Cancel"
+      "cancel": "Cancel",
+      "edit": "Edit"
     },
     "error": {
-      "server": "Error on server",
+      "server": "Error on server. Contact with support",
       "badRequest": "Error on client"
     }
   }

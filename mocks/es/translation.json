@@ -2,10 +2,11 @@
   "app": {
     "commons": {
       "save": "Guardar",
-      "cancel": "Cancelar"
+      "cancel": "Cancelar",
+      "edit": "Editar"
     },
     "error": {
-      "server": "Error en servidor",
+      "server": "Error en servidor. Contacte con soporte",
       "badRequest": "Error en cliente"
     }
   }
